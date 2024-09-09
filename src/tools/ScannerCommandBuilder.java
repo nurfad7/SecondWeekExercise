@@ -48,12 +48,12 @@ public class ScannerCommandBuilder {
         int arrayLength = scanner.nextInt();
         ArrayList<Integer> numbers = new ArrayList<>();
         do {
-            System.out.print("Enter number: ");
             try {
                 if(numbers.size() == arrayLength) {
                     isTypedCorrectly = true;
                     continue;
                 }
+                System.out.print("Enter number: ");
                 numbers.add(scanner.nextInt());
             } catch (InputMismatchException e) {
                 scanner.nextLine();
