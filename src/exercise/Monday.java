@@ -16,7 +16,7 @@ public class Monday {
     }
 
     public void result() {
-        /*/#1 Java Array Program For Array Rotation
+        //#1 Java Array Program For Array Rotation
         System.out.println("Let's input the array to rotate first.");
         ArrayList<Integer> arrayToRotate = ScannerCommandBuilder
                 .getIntegerArrayFromUserInput(scanner);
@@ -64,7 +64,7 @@ public class Monday {
         ArrayList<Integer> arrayToStore = ScannerCommandBuilder
                 .getIntegerArrayFromUserInput(scanner);
         System.out.println("Before: " + arrayToStore.toString());
-        System.out.println("After: " + storeDuplicate(arrayToStore));*/
+        System.out.println("After: " + storeDuplicate(arrayToStore));
         /* #7 get the number of days you have to wait
             after the i-th day to get a warmer temperature */
         System.out.println("Let's input the array of temperatures.");
