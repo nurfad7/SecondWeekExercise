@@ -2,6 +2,7 @@ package exercise;
 import tools.ScannerCommandBuilder;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -20,7 +21,13 @@ public class Monday {
         int d = ScannerCommandBuilder
                 .getIntegerFromUserInput(scanner,"Enter d: ");
         System.out.println(rotateArrayCustom(arrayToRotate, d).toString());
-        //#2
+        //#2 Check if Array Contain Duplicates
+        System.out.println("Let's input the array first.");
+        ArrayList<Integer> arrayToCheckDuplicate = ScannerCommandBuilder
+                .getIntegerArrayFromUserInput(scanner);
+        System.out.println(arrayToCheckDuplicate.toString());
+        System.out.println(isDuplicated(arrayToCheckDuplicate));
+
     }
 
     private ArrayList<Integer> rotateArrayCustom(ArrayList<Integer> arrayToRotate, int d) {
@@ -39,5 +46,17 @@ public class Monday {
         });
         rotatedArray.addAll(beforeLimitArray);
         return rotatedArray;
+    }
+
+    private boolean isDuplicated(ArrayList<Integer> arrayToCheck) {
+        HashMap<Integer, Integer> storedNumber = new HashMap<>();
+        AtomicBoolean thereIsDuplicate = new AtomicBoolean(false);
+        arrayToCheck.forEach(number -> {
+            if (storedNumber.containsKey(number)) {
+                thereIsDuplicate.set(true);
+            }
+            storedNumber.put(number, 0);
+        });
+        return thereIsDuplicate.get();
     }
 }
